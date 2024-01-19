@@ -35,7 +35,7 @@ const Banners = ({ bannersData }) => {
     const settings = {
         centerMode: true,
         centerPadding: '80px',
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 1500,
         slidesToShow: 1,

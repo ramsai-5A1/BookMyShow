@@ -10,3 +10,5 @@
 - Created components and added Routes
 - Built FirstHeader component
 - Built SecondHeader component
+- Built Slides which autoPlay themselves 
+- Added leftArrow and rightArrow functionality for above slides
