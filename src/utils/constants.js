@@ -10,5 +10,10 @@ export const MENU_ICON = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADh
 
 //placeholder constants
 export const CITIES_AVAILABLE = ["Hyderabad", "Mumbai", "Visakhapatnam", "Bangalore", "Delhi", "Kolkata"];
-
+export const FILTERS_KEYS = ["Languages", "Genres", "Format"];
+export const FILTERS_VALUES = [
+    ["English", "Telugu", "Hindi", "Malayalam", "Tamil"],
+    ["Drama", "Action", "Thriller", "Comedy", "Adventure", "Romantic", "Animation", "Fantacy", "Musical", "Horror", "Crime"],
+    ["2D", "4DX", "4DX 3D"]
+];
 

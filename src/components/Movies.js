@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import MOVIES_BANNERS_LIST from "../utils/Mocks/moviesBannersList";
 import Banners from "./Banners";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToMoviesList } from "../utils/Redux/MoviesSlice";
+import MovieCard from "./MovieCard";
+import mockMoviesList from "../utils/Mocks/moviesList";
+import DropDown from "./DropDown";
+import { FILTERS_KEYS, FILTERS_VALUES } from "../utils/constants";
 
 const Movies = () => {
     const dispatch = useDispatch();
@@ -13,18 +16,52 @@ const Movies = () => {
         const fetchDataFromBackend = async () => {
             const rawData = await fetch("https://dummyapi.online/api/movies");
             const data = await rawData.json();
-            dispatch(addToMoviesList(data));
+            dispatch(addToMoviesList(mockMoviesList));
         }
         if (!moviesList) {
             fetchDataFromBackend();
         }
     }, []);
 
+    if(!moviesList) {
+        return <h1>Loading...</h1>
+    }
+
     return (
         <div>
             <Banners bannersData={MOVIES_BANNERS_LIST}/>
+            <div className="flex p-2">
+                <Filters/>
+                <AllMovies />
+            </div>
+            
         </div>
     )
 };
+
+const Filters = () => {
+    return (
+        <div className="w-1/3 h-96 bg-gray-300">
+            {FILTERS_KEYS.map((key, index) => {
+                return <DropDown key={key} title={key} values={FILTERS_VALUES[index]}/>
+            })}
+        </div>
+    )
+}
+
+const AllMovies = () => {
+    const moviesList = useSelector((store) => store.movies.moviesList);
+
+    return (
+        <div className="w-2/3 p-2">
+            <div className="bg-gray-300 h-64">
+
+            </div>
+            <div className="flex grid grid-cols-1 p-2 md:grid-cols-4">
+                {moviesList.map(movie => <MovieCard key={movie.id} movie={movie}/>)}
+            </div>    
+        </div>
+    )
+}
 
 export default Movies;
