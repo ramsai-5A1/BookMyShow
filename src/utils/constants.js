@@ -17,3 +17,5 @@ export const FILTERS_VALUES = [
     ["2D", "4DX", "4DX 3D"]
 ];
 
+export const LANGUAGES_AVAILABLE = ["English", "Telugu", "Hindi", "Malayalam", "Tamil"];
+

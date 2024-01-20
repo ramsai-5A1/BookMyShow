@@ -1,6 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
 import { BOOK_MY_SHOW_LOGO_URL, CITIES_AVAILABLE, MENU_ICON } from "../utils/constants";
+import { modifyLocation } from "../utils/Redux/UserSlice";
 
 const FirstHeader = () => {
+    const dispatch = useDispatch();
+    const location = useSelector((store) => store.user.location);
+
+    const handleSelect = (event) => {
+        dispatch(modifyLocation(event.target.value));
+    }
+
     return (
         <div className="w-full h-20 bg-white flex justify-between">
             <div className="pl-32 flex p-2">
@@ -18,8 +27,8 @@ const FirstHeader = () => {
             </div>
 
             <div className="items-center flex justify-between px-24">
-                <select className="">
-                    {CITIES_AVAILABLE.map((city) => <option key={city}>{city}</option>)}
+                <select value={location} onChange={handleSelect} className="">
+                    {CITIES_AVAILABLE.map((city) => <option key={city} value={city}>{city}</option>)}
                 </select>
                 <div className="px-4">
                     <button className="bg-red-500 w-24 rounded-md p-1 h-8 text-white">Sign in</button>
