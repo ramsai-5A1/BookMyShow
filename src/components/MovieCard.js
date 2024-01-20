@@ -1,7 +1,7 @@
 
 const MovieCard = ({ movie }) => {
     return (
-        <div className="p-4 hover:cursor-pointer transition-transform transform hover:scale-105">
+        <div className="shadow-lg p-4 hover:cursor-pointer transition-transform transform hover:scale-105">
             <div className="w-48 h-84">
                 <img
                     alt="thumbnail"

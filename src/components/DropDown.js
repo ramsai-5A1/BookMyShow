@@ -11,7 +11,7 @@ const DropDown = ({ title, values }) => {
     }
 
     return (
-        <div className="bg-white text-red-600 min-h-14  p-2">
+        <div className={`bg-white shadow-lg m-3 ${clicked ? 'text-red-600' : 'text-black'} min-h-14  p-2`}>
             <div className="flex justify-between">
                 <div onClick={handleOnClick} className="hover:cursor-pointer flex p-2 items-center">
                     {clicked ? <FaAngleUp/> : <FaAngleDown/>}

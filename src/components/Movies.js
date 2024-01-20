@@ -30,7 +30,7 @@ const Movies = () => {
     return (
         <div>
             <Banners bannersData={MOVIES_BANNERS_LIST}/>
-            <div className="flex p-2">
+            <div className="flex p-2 pt-20">
                 <Filters/>
                 <AllMovies />
             </div>
@@ -41,7 +41,8 @@ const Movies = () => {
 
 const Filters = () => {
     return (
-        <div className="w-1/3 h-96 bg-gray-300">
+        <div className="w-1/3 h-96 ">
+            <label className="font-bold text-3xl p-2">Filters</label>
             {FILTERS_KEYS.map((key, index) => {
                 return <DropDown key={key} title={key} values={FILTERS_VALUES[index]}/>
             })}

@@ -12,3 +12,8 @@
 - Built SecondHeader component
 - Built Slides which autoPlay themselves 
 - Added leftArrow and rightArrow functionality for above slides
+- Inserted MovieList into redux-store
+- Built MovieCard component and rendered few movies by reading from redux-store
+- Built Filter component (Conditionally applied CSS)
+- Changed favicon icon and text to be displayed on tab
+- 
