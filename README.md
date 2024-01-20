@@ -18,3 +18,4 @@
 - Changed favicon icon and text to be displayed on tab
 - Added Shimmer UI for Home (Movies) Web-page
 - Completed Footer component of Movies Web-page
+- Added ShimmerUI for Footer component
