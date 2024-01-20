@@ -8,6 +8,7 @@ import mockMoviesList from "../utils/Mocks/moviesList";
 import DropDown from "./DropDown";
 import { FILTERS_KEYS, FILTERS_VALUES, LANGUAGES_AVAILABLE } from "../utils/constants";
 import { FaAngleRight } from "react-icons/fa";
+import MoviesShimmer from "./ShimmerUI/MoviesShimmer";
 
 
 const Movies = () => {
@@ -18,7 +19,9 @@ const Movies = () => {
         const fetchDataFromBackend = async () => {
             const rawData = await fetch("https://dummyapi.online/api/movies");
             const data = await rawData.json();
-            dispatch(addToMoviesList(mockMoviesList));
+            setTimeout(() => {
+                dispatch(addToMoviesList(mockMoviesList));
+            }, 2000);
         }
         if (!moviesList) {
             fetchDataFromBackend();
@@ -26,7 +29,7 @@ const Movies = () => {
     }, []);
 
     if(!moviesList) {
-        return <h1>Loading...</h1>
+        return <MoviesShimmer/>
     }
 
     return (
