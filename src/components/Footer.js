@@ -5,11 +5,27 @@ import { FaYoutube, FaLinkedin, FaFacebook, FaTwitter, FaInstagram, FaPinterest 
 const Footer = () => {
     return (
         <div className="bg-gray-800 text-white w-full">
+            <FooterHeader/>
             <FooterBody/>
             <FooterBottom/>
         </div>
     )
 };
+
+const FooterHeader = () => {
+    return (
+        <div className="bg-gray-900 w-ful flex p-3 items-center justify-between">
+            <div className="flex space-x-4 pl-20">
+                <label className="font-bold text-xl">List your Show</label>
+                <label className="font-semibold">Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow </label>
+            </div>
+            
+            <div className="pr-20">
+                <button className="text-white bg-red-500 p-2 m-2 rounded-md">Contact today!</button>
+            </div>
+        </div>
+    )
+}
 
 const FooterBody = () => {
     const location = useSelector((store) => store.user.location);
@@ -55,28 +71,28 @@ const FooterBottomDivider = () => {
 const SocialMediaIcons = () => {
     return (
         <div className="flex py-5 justify-center items-center">
-            <div className="flex items-center w-auto space-x-2">
-                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+            <div className="flex items-center w-auto space-x-2 ">
+                <div className="w-10 h-10 bg-gray-400 hover:cursor-pointer hover:bg-white hover:text-black rounded-full flex items-center justify-center">
                     <FaFacebook/>
                 </div>
 
-                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center hover:cursor-pointer hover:bg-white hover:text-black">
                     <FaTwitter/>
                 </div>
 
-                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center hover:cursor-pointer hover:bg-white hover:text-black">
                     <FaInstagram/>
                 </div>
 
-                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center hover:cursor-pointer hover:bg-white hover:text-black">
                     <FaYoutube/>
                 </div>
 
-                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center hover:cursor-pointer hover:bg-white hover:text-black">
                     <FaPinterest/>
                 </div>
 
-                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center hover:cursor-pointer hover:bg-white hover:text-black">
                     <FaLinkedin/>
                 </div>
             </div>
