@@ -1,8 +1,9 @@
+import StreamBanner from "./StreamBanner";
 
 const Stream = () => {
     return (
         <div>
-            Stream
+            <StreamBanner/>
         </div>
     )
 };

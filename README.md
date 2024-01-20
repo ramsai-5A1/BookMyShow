@@ -19,3 +19,4 @@
 - Added Shimmer UI for Home (Movies) Web-page
 - Completed Footer component of Movies Web-page
 - Added ShimmerUI for Footer component
+- Linked routings to the header options (In SecondHeader component)
