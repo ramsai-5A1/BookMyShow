@@ -35,6 +35,7 @@ const Movies = () => {
         return <MoviesShimmer/>
     }
 
+
     return (
         <div className="bg-gray-100">
             <Banners bannersData={MOVIES_BANNERS_LIST}/>

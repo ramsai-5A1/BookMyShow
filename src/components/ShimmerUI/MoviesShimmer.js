@@ -7,9 +7,17 @@ const MoviesShimmer = () => {
                 <FiltersShimmer/>
                 <AllMoviesShimmer />
             </div>
+            <FooterShimmer/>
         </div>
     )
 };
+
+const FooterShimmer = () => {
+    return (
+        <div className="w-full h-[600px] bg-gray-300">
+        </div>
+    )
+}
 
 const BannerShimmer = () => {
     return (
