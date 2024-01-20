@@ -9,6 +9,7 @@ import DropDown from "./DropDown";
 import { FILTERS_KEYS, FILTERS_VALUES, LANGUAGES_AVAILABLE } from "../utils/constants";
 import { FaAngleRight } from "react-icons/fa";
 import MoviesShimmer from "./ShimmerUI/MoviesShimmer";
+import Footer from "./Footer";
 
 
 const Movies = () => {
@@ -19,7 +20,9 @@ const Movies = () => {
         const fetchDataFromBackend = async () => {
             const rawData = await fetch("https://dummyapi.online/api/movies");
             const data = await rawData.json();
+            //Since the data doesn't has proper thumbnail, so at present i am proceeding with mock-data
             setTimeout(() => {
+                //simulating the delay in api response, so that we can display shimmer-ui to customer for better ui-experience
                 dispatch(addToMoviesList(mockMoviesList));
             }, 2000);
         }
@@ -39,7 +42,7 @@ const Movies = () => {
                 <Filters/>
                 <AllMovies />
             </div>
-            
+            <Footer/>
         </div>
     )
 };

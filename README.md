@@ -16,4 +16,4 @@
 - Built MovieCard component and rendered few movies by reading from redux-store
 - Built Filter component (Conditionally applied CSS)
 - Changed favicon icon and text to be displayed on tab
-- 
+- Added Shimmer UI for Home (Movies) Web-page

@@ -18,4 +18,21 @@ export const FILTERS_VALUES = [
 ];
 
 export const LANGUAGES_AVAILABLE = ["English", "Telugu", "Hindi", "Malayalam", "Tamil"];
+export const FOOTER_KEYS = [
+    "MOVIES NOW SHOWING IN ", 
+    "UPCOMING MOVIES IN ", 
+    "MOVIE UPDATES AND CELEBRITIES", 
+    "MOVIES PER WEEK", 
+    "MOVIES BY GENRE"
+];
+export const FOOTER_VALUES = [
+    ["Hanu-Man", "Guntur kaaram", "Naa Saami Ranga", "Saindhav", "Hanu-Man", "Guntur kaaram", "Naa Saami Ranga", "Saindhav"],
+    ["Pushpa-2", "Hanu-Man", "Guntur kaaram", "Naa Saami Ranga", "Saindhav", "Hanu-Man", "Guntur kaaram", "Naa Saami Ranga", "Saindhav"],
+    ["Upcoming Movies", "Movies Now Showing", "Movie Celebrities"],
+    ["Movies Playing Today", "Movies Playing Tomorrow", "Movies Playng This Weekend"],
+    ["Drama Movies", "Action Movies", "Thriller Movies", "Comedy Movies", "Adventure Movies", "Romantic Movies", "Animation Movies", "Fantacy Movies", "Movies in Sci-Fi", "Movies in Historical"]
+];
 
+export const COPYRIGHT_TEXT_1 = "© 2024 BookMyShow. All Rights Reserved";
+export const COPYRIGHT_TEXT_2 = "Privacy Policy | Terms of Service | Designed with ❤️ by BookMyShow. The content, images, and trademarks on this website are the property of BookMyShow and may not be used without permission.";
+export const COPYRIGHT_TEXT_3 = "Unauthorized use is prohibited and punished by law";
