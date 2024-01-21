@@ -6,7 +6,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { useRef } from "react";
 
 
-const PrevArrow = ({moveSlide}) => {
+export const PrevArrow = ({moveSlide}) => {
     return (
         <button 
             onClick={() => moveSlide.current.slickPrev()} 
@@ -16,7 +16,7 @@ const PrevArrow = ({moveSlide}) => {
     )
 };
 
-const NextArrow = ({moveSlide}) => {
+export const NextArrow = ({moveSlide}) => {
     return (
         <button 
             onClick={() => moveSlide.current.slickNext()} 
