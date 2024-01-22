@@ -30,14 +30,30 @@ const MoviesBanner = () => {
 };
 
 const MovieRow = ({title, movies}) => {
+    const AlongWithLabel = WithLabel(MovieCard);
+
+
     return (
         <div className="pl-24 p-4 pt-10">
             <h1 className="font-bold text-3xl">{title}</h1>
             <div className=" flex overflow-x-scroll">
-                {movies.map(movie => <MovieCard movie={movie}/>)}
+                {movies.map(movie => <AlongWithLabel movie={movie}/>)}
             </div>
         </div>
     )
+}
+
+const WithLabel = (MovieCard) => {
+    return (props) => {
+        return (
+            <div>
+                <MovieCard {...props}/>
+                <div className="flex items-center ">
+                    <div className="rounded-lg shadow-lg w-60 h-10 p-2  bg-red-400 text-white">PREMIERE</div>
+                </div>
+            </div>
+        )   
+    }
 }
 
 const MovieCard = ({ movie }) => {
