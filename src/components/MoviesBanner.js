@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import mockMoviesList from "../utils/Mocks/moviesList";
+import Footer from "./Footer";
 
 const MoviesBanner = () => {
 
@@ -25,6 +26,7 @@ const MoviesBanner = () => {
             <MovieRow title={"Upcoming Releases"} movies={moviesList}/>
             <MovieRow title={"Top 10 TV Shows"} movies={moviesList}/>
             <MovieRow title={"Free movies for you"} movies={moviesList}/>
+            <Footer/>
         </div>
     )
 };
@@ -39,6 +41,7 @@ const MovieRow = ({title, movies}) => {
             <div className=" flex overflow-x-scroll">
                 {movies.map(movie => <AlongWithLabel movie={movie}/>)}
             </div>
+            
         </div>
     )
 }

@@ -4,10 +4,12 @@ import { FaYoutube, FaLinkedin, FaFacebook, FaTwitter, FaInstagram, FaPinterest 
 
 const Footer = () => {
     return (
-        <div className="bg-gray-800 text-white w-full">
-            <FooterHeader/>
-            <FooterBody/>
-            <FooterBottom/>
+        <div className="pt-36">
+            <div className="bg-gray-800  text-white w-full">
+                <FooterHeader/>
+                <FooterBody/>
+                <FooterBottom/>
+            </div>
         </div>
     )
 };
